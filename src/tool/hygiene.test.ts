@@ -19,7 +19,7 @@ function collect(dir: string, out: string[] = []): string[] {
 const files = ['src', 'extension', 'src-tauri', 'samples', '.github'].flatMap((d) => { try { return collect(join(root, d)); } catch { return []; } })
   .concat(['README.md', 'THIRD_PARTY_LICENSES.md', 'CHANGELOG.md', 'tool.json', 'package.json'].map((f) => join(root, f)));
 const read = (f: string) => readFileSync(f, 'utf8');
-const rel = (f: string) => f.slice(root.length + 1).replaceAll('\\', '/');
+const rel = (f: string) => f.slice(root.length + 1).split('\\').join('/');
 
 describe('发布内容检查', () => {
   it('扫到了足够多的文件（防止检查变成空转）', () => {
