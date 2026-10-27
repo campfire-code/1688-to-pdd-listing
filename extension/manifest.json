@@ -1,0 +1,67 @@
+{
+  "manifest_version": 3,
+  "name": "篝火采集（1688 / 淘宝 / 天猫）",
+  "version": "0.1.0",
+  "description": "在你已登录的浏览器里，把当前商品页的标题、图片、规格和价格发给本机的「1688→拼多多上架」应用。数据只发到本机 127.0.0.1。",
+  "author": "篝火出品",
+
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+
+  "permissions": ["activeTab", "storage", "scripting"],
+
+  "host_permissions": [
+    "*://*.1688.com/*",
+    "*://*.alibaba.com/*",
+    "*://*.taobao.com/*",
+    "*://*.tmall.com/*",
+    "*://*.tmall.hk/*",
+    "*://*.taobaocdn.com/*",
+    "*://*.tbcdn.cn/*",
+    "*://*.alicdn.com/*",
+    "http://127.0.0.1:48765/*"
+  ],
+
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://detail.1688.com/offer/*", "*://*.1688.com/offer/*"],
+      "js": ["content/1688-main.js"],
+      "world": "MAIN",
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["*://detail.1688.com/offer/*", "*://*.1688.com/offer/*"],
+      "js": ["content/1688-product.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["*://*.taobao.com/*", "*://*.tmall.com/*", "*://*.tmall.hk/*"],
+      "js": ["content/taobao-main.js"],
+      "world": "MAIN",
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["*://*.taobao.com/*", "*://*.tmall.com/*", "*://*.tmall.hk/*"],
+      "js": ["content/taobao-product.js"],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "篝火采集",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  }
+}

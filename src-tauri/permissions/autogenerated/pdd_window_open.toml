@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-pdd-window-open"
+description = "Enables the pdd_window_open command without any pre-configured scope."
+commands.allow = ["pdd_window_open"]
+
+[[permission]]
+identifier = "deny-pdd-window-open"
+description = "Denies the pdd_window_open command without any pre-configured scope."
+commands.deny = ["pdd_window_open"]

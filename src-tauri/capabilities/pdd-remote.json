@@ -1,0 +1,10 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "pdd-remote",
+  "description": "拼多多商家后台窗口：只允许向应用主窗口发送事件（回报页面状态和操作结果），不能读写文件、不能调用其它命令",
+  "windows": ["pdd"],
+  "remote": {
+    "urls": ["https://mms.pinduoduo.com/*", "https://*.pinduoduo.com/*"]
+  },
+  "permissions": ["core:event:allow-emit"]
+}

@@ -1,0 +1,10 @@
+# 打 v* 标签自动出 Windows / macOS 安装包并发布（流程定义在 campfire-code/toolkit-hub）
+name: release
+on:
+  push:
+    tags: ['v*']
+permissions:
+  contents: write
+jobs:
+  release:
+    uses: campfire-code/toolkit-hub/.github/workflows/tauri-release.yml@v1

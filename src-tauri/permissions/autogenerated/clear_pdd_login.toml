@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-clear-pdd-login"
+description = "Enables the clear_pdd_login command without any pre-configured scope."
+commands.allow = ["clear_pdd_login"]
+
+[[permission]]
+identifier = "deny-clear-pdd-login"
+description = "Denies the clear_pdd_login command without any pre-configured scope."
+commands.deny = ["clear_pdd_login"]

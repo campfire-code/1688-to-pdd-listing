@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-collector-status"
+description = "Enables the collector_status command without any pre-configured scope."
+commands.allow = ["collector_status"]
+
+[[permission]]
+identifier = "deny-collector-status"
+description = "Denies the collector_status command without any pre-configured scope."
+commands.deny = ["collector_status"]

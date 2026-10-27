@@ -1,0 +1,9 @@
+# 推送与 PR 时在 Windows / macOS 上跑类型检查和单元测试
+name: check
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  check:
+    uses: campfire-code/toolkit-hub/.github/workflows/tauri-check.yml@v1

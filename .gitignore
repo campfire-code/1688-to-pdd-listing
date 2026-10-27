@@ -1,0 +1,9 @@
+node_modules/
+dist/
+src-tauri/target/
+src-tauri/gen/
+src-tauri/binaries/
+sidecar/build/
+sidecar/dist/
+*.spec
+.DS_Store

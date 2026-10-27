@@ -1,0 +1,60 @@
+/* 1688→拼多多上架：只用 kit.css 的变量。类名统一以 pp- 开头。 */
+.pp-root { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 12px; }
+.pp-tabs { align-self: flex-start; flex: none; }
+.pp-tabs button { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; }
+.pp-body { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+.pp-lib { flex: 1; min-height: 0; display: flex; flex-wrap: wrap; gap: 12px; align-items: stretch; }
+.pp-list { flex: 999 1 460px; min-width: 0; display: flex; flex-direction: column; min-height: 320px; }
+.pp-editor { flex: 1 1 340px; max-width: 420px; min-width: 300px; padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+.pp-toolbar { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; padding: 8px; border-bottom: 1px solid var(--line); }
+.pp-toolbar .k-btn { height: 30px; padding: 0 10px; }
+.pp-search { width: 170px; height: 30px; }
+.pp-tablewrap { flex: 1; min-height: 0; overflow: auto; }
+.pp-tablewrap tbody tr { cursor: pointer; }
+.pp-prod { display: flex; align-items: center; gap: 10px; min-width: 220px; max-width: 420px; }
+.pp-prod-text { display: grid; min-width: 0; }
+.pp-thumb { width: 40px; height: 40px; border-radius: 6px; object-fit: cover; flex: none; background: var(--chip); border: 1px solid var(--line); }
+.pp-nothumb { display: inline-block; }
+.pp-gap { margin-left: 6px; }
+.pp-foot { padding: 7px 12px; border-top: 1px solid var(--line); font-size: .88em; }
+.pp-empty { margin: auto; text-align: center; line-height: 1.9; padding: 40px 16px; display: grid; justify-items: center; gap: 8px; }
+.pp-h { margin: 6px 0 0; font-size: 1em; display: flex; align-items: center; gap: 6px; }
+.pp-orig { margin: 0; font-size: .88em; overflow-wrap: anywhere; }
+.pp-btns { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+.pp-btns .k-btn { height: 30px; padding: 0 10px; }
+.pp-over { color: var(--err); font-weight: 600; }
+.pp-p { margin: 0; font-size: .9em; line-height: 1.6; }
+.pp-sku td, .pp-sku th { padding: 4px 8px; }
+.pp-sku tr.pp-filler td { color: var(--muted); }
+.pp-flag { margin: 0; font-size: .88em; line-height: 1.5; display: flex; gap: 6px; align-items: flex-start; }
+.pp-flag.err { color: var(--err); }
+.pp-flag.warn { color: var(--warn); }
+.pp-ask { display: flex; gap: 6px; }
+.pp-answer { margin: 0; padding: 8px 10px; background: var(--chip); border-radius: var(--radius); white-space: pre-wrap; font-size: .92em; line-height: 1.6; }
+
+.pp-cols { flex: 1; min-height: 0; display: flex; flex-wrap: wrap; gap: 12px; align-items: stretch; }
+.pp-side { flex: 1 1 320px; max-width: 380px; min-width: 280px; padding: 14px; display: flex; flex-direction: column; gap: 18px; align-content: start; }
+.pp-main { flex: 999 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 12px; align-content: start; }
+.pp-sec { display: grid; gap: 8px; align-content: start; }
+.pp-card { padding: 12px 14px; display: grid; gap: 8px; align-content: start; }
+.pp-card h3 { margin: 0; font-size: 1em; }
+.pp-mode { display: flex; gap: 6px; align-items: flex-start; padding: 8px 10px; border-radius: var(--radius); background: var(--ok-soft); color: var(--ok); font-size: .9em; line-height: 1.5; }
+.pp-submit { display: grid; gap: 6px; padding: 8px 10px; border: 1px dashed var(--warn); border-radius: var(--radius); }
+.pp-checks { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; max-height: 240px; overflow: auto; }
+.pp-checks li { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: .92em; }
+.pp-result { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; padding: 4px 0; border-bottom: 1px dashed var(--line); }
+.pp-log { list-style: none; margin: 0; padding: 0; max-height: 240px; overflow: auto; font-size: .86em; color: var(--muted); display: grid; gap: 2px; font-variant-numeric: tabular-nums; }
+.pp-notes { margin: 0; padding-left: 18px; line-height: 1.8; font-size: .92em; color: var(--muted); }
+.pp-cols-list { margin: 0; line-height: 2; font-size: .92em; }
+
+.pp-state { display: flex; align-items: center; gap: 6px; padding: 7px 10px; border-radius: var(--radius); background: var(--chip); font-size: .92em; overflow-wrap: anywhere; }
+.pp-state.ok { background: var(--ok-soft); color: var(--ok); }
+.pp-state.err { background: var(--err-soft); color: var(--err); }
+.pp-steps { margin: 0; padding-left: 20px; display: grid; gap: 12px; }
+.pp-steps li > p { margin: 2px 0 6px; font-size: .92em; line-height: 1.6; }
+.pp-steps code, .pp-card code { background: var(--chip); padding: 1px 6px; border-radius: 4px; font-size: .92em; overflow-wrap: anywhere; }
+.pp-path { font-size: .85em; color: var(--muted); overflow-wrap: anywhere; margin: 6px 0 0; }
+
+.pp-settings { flex: 1; min-height: 0; display: grid; gap: 12px; align-content: start; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); }
+.pp-grid { display: grid; gap: 10px 14px; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
+.pp-danger { display: grid; gap: 6px; padding: 10px; border: 1px solid var(--warn); border-radius: var(--radius); background: var(--warn-soft); }

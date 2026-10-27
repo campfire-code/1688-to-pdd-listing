@@ -1,0 +1,13 @@
+{
+  "id": "e01",
+  "slug": "1688-to-pdd-listing",
+  "name": "1688 拼多多铺货助手",
+  "version": "0.1.0",
+  "repo": "campfire-code/1688-to-pdd-listing",
+  "license": "MIT",
+  "ui": {
+    "layout": "b",
+    "palette": "blue"
+  },
+  "upstream": null
+}
