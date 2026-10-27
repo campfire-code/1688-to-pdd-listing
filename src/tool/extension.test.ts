@@ -101,7 +101,7 @@ describe('插件包本身', () => {
   });
   it('内容脚本都存在，没有多余文件（不含拼多多 / 闲鱼采集、诊断脚本）', () => {
     for (const cs of manifest.content_scripts) for (const f of cs.js) expect(files).toContain(join(ext, f));
-    expect(files.map((f) => f.slice(ext.length + 1)).sort()).toEqual([
+    expect(files.map((f) => f.slice(ext.length + 1).replaceAll('\\', '/')).sort()).toEqual([
       'background.js', 'content/1688-main.js', 'content/1688-product.js', 'content/taobao-main.js', 'content/taobao-product.js',
       'icons/icon128.png', 'icons/icon16.png', 'icons/icon48.png', 'manifest.json', 'popup/popup.html', 'popup/popup.js',
     ]);
